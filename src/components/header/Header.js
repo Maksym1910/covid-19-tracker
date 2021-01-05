@@ -26,7 +26,7 @@ function Header() {
   }
 
   return (
-    <div className='header'>
+    <header className='header'>
       <h1 className='header__title'>COVID-19 TRACKER</h1>
       <FormControl className='header__dropdown'>
         <Select variant='outlined' onChange={onCountryChange} value={country}>
@@ -38,7 +38,7 @@ function Header() {
           }
         </Select>
       </FormControl>
-    </div>
+    </header>
   )
 }
 
