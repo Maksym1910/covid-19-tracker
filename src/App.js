@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import Header from './components/header/Header';
+import Stats from './components/main/Stats';
 import Sidebar from "./components/sidebar/Sidebar";
-import Stats from "./components/main/Stats";
 
 function App() {
   const [API_WORLDWIDE] = useState('https://disease.sh/v3/covid-19/all?yesterday=true&strict=true');
@@ -10,6 +10,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({});
+  const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
    fetch(API_WORLDWIDE)
@@ -25,6 +26,7 @@ function App() {
         name: country.country,
         value: country.countryInfo.iso2,
       }))
+      setTableData(data);
       setCountries(countries);
     }
     getCountries();
@@ -55,7 +57,7 @@ function App() {
       </div>
 
       <div className='app__right'>
-        <Sidebar />
+        <Sidebar tableData={tableData}/>
       </div>
     </div>
   );
