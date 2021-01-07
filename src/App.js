@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Stats from './components/main/Stats';
 import Sidebar from "./components/sidebar/Sidebar";
+import {sortData} from "./utils/sort";
 
 function App() {
   const [API_WORLDWIDE] = useState('https://disease.sh/v3/covid-19/all?yesterday=true&strict=true');
@@ -26,7 +27,9 @@ function App() {
         name: country.country,
         value: country.countryInfo.iso2,
       }))
-      setTableData(data);
+
+      const sortedData = sortData(data);
+      setTableData(sortedData);
       setCountries(countries);
     }
     getCountries();

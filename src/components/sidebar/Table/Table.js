@@ -7,7 +7,7 @@ const Table = ({ tableData }) => {
       {tableData.map(({ country, cases }) => (
           <tr>
             <td>{country}</td>
-            <td>{cases}</td>
+            <td><strong>{cases.toLocaleString()}</strong></td>
           </tr>
       ))}
     </div>
