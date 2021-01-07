@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card, CardContent} from "@material-ui/core";
-import Table from "./Table";
+import Table from "./Table/Table";
 
 const Sidebar = ({ tableData }) => {
   return (
