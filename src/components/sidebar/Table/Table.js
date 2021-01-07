@@ -5,10 +5,10 @@ const Table = ({ tableData }) => {
   return (
     <div className='table'>
       {tableData.map(({ country, cases }) => (
-          <tr>
-            <td>{country}</td>
-            <td><strong>{cases.toLocaleString()}</strong></td>
-          </tr>
+        <tr>
+          <td>{country}</td>
+          <td><strong>{cases.toLocaleString()}</strong></td>
+        </tr>
       ))}
     </div>
   );

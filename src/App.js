@@ -20,7 +20,7 @@ function App() {
   }, [API_WORLDWIDE]);
 
   useEffect(() => {
-    const getCountries = async () => {
+    const getCountriesData = async () => {
       const response = await fetch(API_COUNTRIES);
       const data = await response.json();
       const countries = data.map(country => ({
@@ -32,7 +32,7 @@ function App() {
       setTableData(sortedData);
       setCountries(countries);
     }
-    getCountries();
+    getCountriesData();
   }, [API_COUNTRIES]);
 
   const onCountryChange = async event => {
