@@ -3,14 +3,14 @@ import './Stats.css'
 import InfoBox from "./infobox/InfoBox";
 import Map from "./map/Map";
 
-const Stats = props => {
+const Stats = ({ countryInfo }) => {
 
   return (
     <div>
       <div className='stats'>
-        <InfoBox title='Coronavirus cases' cases={props.countryInfo.todayCases} total={props.countryInfo.cases}/>
-        <InfoBox title='Recovered' cases={props.countryInfo.todayRecovered} total={props.countryInfo.recovered}/>
-        <InfoBox title='Deaths' cases={props.countryInfo.todayDeaths} total={props.countryInfo.deaths}/>
+        <InfoBox title='Coronavirus cases' cases={countryInfo.todayCases} total={countryInfo.cases}/>
+        <InfoBox title='Recovered' cases={countryInfo.todayRecovered} total={countryInfo.recovered}/>
+        <InfoBox title='Deaths' cases={countryInfo.todayDeaths} total={countryInfo.deaths}/>
       </div>
       <Map />
     </div>
