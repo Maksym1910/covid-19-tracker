@@ -1,5 +1,5 @@
 import React from 'react';
-import './Stats.css'
+import './Stats.css';
 import InfoBox from "./infobox/InfoBox";
 import Map from "./map/Map";
 

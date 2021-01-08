@@ -1,23 +1,22 @@
-import React from 'react';
-import './Header.css';
-import {MenuItem, FormControl, Select} from '@material-ui/core';
+import React from "react";
+import "./Header.css";
+import { MenuItem, FormControl, Select } from "@material-ui/core";
 
 const Header = ({ countries, country, onCountryChange }) => {
   return (
-      <header className='header'>
-        <h1 className='header__title'>COVID-19 TRACKER</h1>
-        <FormControl className='header__dropdown'>
-          <Select variant='outlined' onChange={onCountryChange} value={country}>
-            <MenuItem value="worldwide">Worldwide</MenuItem>
-            {
-              countries.map(country => (
-                <MenuItem value={country.value}>{country.name}</MenuItem>
-              ))
-            }
-          </Select>
-        </FormControl>
-      </header>
-  )
-}
+    <header className="header">
+      <h1 className="header__title">COVID-19 TRACKER</h1>
+      <FormControl className="header__dropdown">
+        <Select variant="outlined" onChange={onCountryChange} value={country}>
+          <MenuItem value="worldwide">Worldwide</MenuItem>
+          {countries.map((country) => (
+            // eslint-disable-next-line react/jsx-key
+            <MenuItem value={country.value}>{country.name}</MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

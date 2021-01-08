@@ -1,14 +1,17 @@
-import React from 'react';
-import './Table.css'
+import React from "react";
+import "./Table.css";
 
 const Table = ({ tableData }) => {
   return (
-    <div className='table'>
+    <div className="table">
       {tableData.map(({ country, cases }) => (
-        <tr>
-          <td>{country}</td>
-          <td><strong>{cases.toLocaleString()}</strong></td>
-        </tr>
+        // eslint-disable-next-line react/jsx-key
+          <tr>
+            <td>{country}</td>
+            <td>
+              <strong>{cases.toLocaleString()}</strong>
+            </td>
+          </tr>
       ))}
     </div>
   );
