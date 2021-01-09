@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardContent} from "@material-ui/core";
 import Table from "./Table/Table";
-import LineGraph from "./LineGraph";
+import LineGraph from "./LineGraph/LineGraph";
 import './Sidebar.css';
 
 const Sidebar = ({ tableData }) => {
