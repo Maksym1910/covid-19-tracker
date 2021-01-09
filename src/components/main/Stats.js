@@ -8,9 +8,9 @@ const Stats = ({ countryInfo }) => {
   return (
     <div>
       <div className='stats'>
-        <InfoBox title='Coronavirus cases' cases={countryInfo.todayCases} total={countryInfo.cases}/>
-        <InfoBox title='Recovered' cases={countryInfo.todayRecovered} total={countryInfo.recovered}/>
-        <InfoBox title='Deaths' cases={countryInfo.todayDeaths} total={countryInfo.deaths}/>
+          <InfoBox title='Coronavirus cases' cases={countryInfo.todayCases} total={countryInfo.cases} />
+          <InfoBox title='Recovered' cases={countryInfo.todayRecovered} total={countryInfo.recovered}/>
+          <InfoBox title='Deaths' cases={countryInfo.todayDeaths} total={countryInfo.deaths}/>
       </div>
       <Map />
     </div>
