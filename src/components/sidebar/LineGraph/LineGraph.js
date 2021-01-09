@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import { options } from "../../../utils/options";
 import { buildChartData } from "../../../utils/buildChartData";
-import './LineGraph.css';
+import "./LineGraph.css";
 
 const LineGraph = ({ casesType = "cases" }) => {
   const [API] = useState(
@@ -23,7 +23,7 @@ const LineGraph = ({ casesType = "cases" }) => {
   }, [casesType]);
 
   return (
-    <div className='chart'>
+    <div className="chart">
       {data?.length > 0 && (
         <Line
           data={{
