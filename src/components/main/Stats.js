@@ -3,6 +3,7 @@ import "./Stats.css";
 import InfoBox from "./infobox/InfoBox";
 import Map from "./map/Map";
 import "leaflet/dist/leaflet.css";
+import {prettyPrintStat} from "../../utils/prettyPrintStat";
 
 const Stats = ({ mapCountries, countryInfo, center, zoom }) => {
   return (
@@ -10,18 +11,18 @@ const Stats = ({ mapCountries, countryInfo, center, zoom }) => {
       <div className="stats">
         <InfoBox
           title="Coronavirus cases"
-          cases={countryInfo.todayCases}
-          total={countryInfo.cases}
+          cases={prettyPrintStat(countryInfo.todayCases)}
+          total={prettyPrintStat(countryInfo.cases)}
         />
         <InfoBox
           title="Recovered"
-          cases={countryInfo.todayRecovered}
-          total={countryInfo.recovered}
+          cases={prettyPrintStat(countryInfo.todayRecovered)}
+          total={prettyPrintStat(countryInfo.recovered)}
         />
         <InfoBox
           title="Deaths"
-          cases={countryInfo.todayDeaths}
-          total={countryInfo.deaths}
+          cases={prettyPrintStat(countryInfo.todayDeaths)}
+          total={prettyPrintStat(countryInfo.deaths)}
         />
       </div>
       <Map mapCountries={mapCountries} center={center} zoom={zoom} />
