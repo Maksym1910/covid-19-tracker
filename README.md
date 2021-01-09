@@ -5,6 +5,8 @@ It's a web application is intended to inform users about covid-19 statistics. Th
 * [ReactJS](https://reactjs.org/)
 * [Disease.sh (API)](https://disease.sh/)
 * [Material-ui](https://material-ui.com/)
+* [Chart.js (Chart)](https://www.chartjs.org/)
+* [React Leaflet (Map)](https://react-leaflet.js.org/)
 
 # Usage
 If you want to check covid-19 statistic follow the link: https://maksym1910.github.io/covid-19-tracker/
