@@ -19,7 +19,7 @@ function App() {
     fetch(API_WORLDWIDE)
       .then((response) => response.json())
       .then((data) => setCountryInfo(data));
-  }, [API_WORLDWIDE]);
+  }, []);
 
   useEffect(() => {
     const getCountriesData = async () => {
@@ -35,7 +35,7 @@ function App() {
       setCountries(countries);
     };
     getCountriesData();
-  }, [API_COUNTRIES]);
+  }, []);
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
