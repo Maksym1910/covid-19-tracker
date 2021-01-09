@@ -4,15 +4,19 @@ import "./Table.css";
 const Table = ({ tableData }) => {
   return (
     <div className="table">
-      {tableData.map(({ country, cases }) => (
-        // eslint-disable-next-line react/jsx-key
-          <tr>
-            <td>{country}</td>
-            <td>
-              <strong>{cases.toLocaleString()}</strong>
-            </td>
-          </tr>
-      ))}
+      <table>
+        <tbody>
+          {tableData.map(({ country, cases }) => (
+            // eslint-disable-next-line react/jsx-key
+            <tr>
+              <td>{country}</td>
+              <td>
+                <strong>{cases.toLocaleString()}</strong>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

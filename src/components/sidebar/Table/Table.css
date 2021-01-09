@@ -6,7 +6,7 @@
     color: #6a5d5d;
 }
 
-.table tr {
+.table tr  {
     display: flex;
     justify-content: space-between;
 }
