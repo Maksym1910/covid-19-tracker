@@ -14,6 +14,8 @@ function App() {
   const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
+  const [mapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapZoom] = useState(3);
 
   useEffect(() => {
     fetch(API_WORLDWIDE)
@@ -62,7 +64,11 @@ function App() {
           countries={countries}
           onCountryChange={onCountryChange}
         />
-        <Stats countryInfo={countryInfo} />
+        <Stats
+          countryInfo={countryInfo}
+          zoom={mapZoom}
+          center={mapCenter}
+        />
       </div>
 
       <div className="app__right">

@@ -2,8 +2,9 @@ import React from "react";
 import "./Stats.css";
 import InfoBox from "./infobox/InfoBox";
 import Map from "./map/Map";
+import "leaflet/dist/leaflet.css";
 
-const Stats = ({ countryInfo }) => {
+const Stats = ({ countryInfo, zoom, center }) => {
   return (
     <div>
       <div className="stats">
@@ -23,7 +24,7 @@ const Stats = ({ countryInfo }) => {
           total={countryInfo.deaths}
         />
       </div>
-      <Map />
+      <Map center={center} zoom={zoom}/>
     </div>
   );
 };
