@@ -6,9 +6,9 @@ const Table = ({ tableData }) => {
     <div className="table">
       <table>
         <tbody>
-          {tableData.map(({ country, cases }) => (
+          {tableData.map(({ country, cases }, index) => (
             // eslint-disable-next-line react/jsx-key
-            <tr>
+            <tr key={index}>
               <td>{country}</td>
               <td>
                 <strong>{cases.toLocaleString()}</strong>

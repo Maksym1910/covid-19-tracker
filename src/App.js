@@ -31,6 +31,7 @@ function App() {
       const countries = data.map((country) => ({
         name: country.country,
         value: country.countryInfo.iso2,
+        id: country.countryInfo._id,
       }));
       const sortedData = sortData(data);
 

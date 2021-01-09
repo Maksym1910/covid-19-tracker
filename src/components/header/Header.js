@@ -9,9 +9,8 @@ const Header = ({ countries, country, onCountryChange }) => {
       <FormControl className="header__dropdown">
         <Select variant="outlined" onChange={onCountryChange} value={country}>
           <MenuItem value="worldwide">Worldwide</MenuItem>
-          {countries.map((country) => (
-            // eslint-disable-next-line react/jsx-key
-            <MenuItem value={country.value}>{country.name}</MenuItem>
+          {countries.map((country, index) => (
+            <MenuItem key={index} value={country.value}>{country.name}</MenuItem>
           ))}
         </Select>
       </FormControl>

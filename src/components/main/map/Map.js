@@ -10,7 +10,6 @@ const Map = ({ mapCountries, center, zoom }) => {
     return null;
   }
 
-  console.log(mapCountries);
   return (
     <div className="map">
       <LeafletMap center={center} zoom={zoom}>
