@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, CardContent} from "@material-ui/core";
 import Table from "./Table/Table";
+import LineGraph from "./LineGraph";
 
 const Sidebar = ({ tableData }) => {
   return (
@@ -9,6 +10,7 @@ const Sidebar = ({ tableData }) => {
         <h3>Live Cases by Country</h3>
         <Table tableData={tableData} />
         <h4>Worldwide new cases</h4>
+        <LineGraph />
       </CardContent>
     </Card>
   );
