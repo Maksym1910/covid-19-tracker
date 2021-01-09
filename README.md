@@ -9,5 +9,8 @@ It's a web application is intended to inform users about covid-19 statistics. Th
 # Usage
 If you want to check covid-19 statistic follow the link: https://maksym1910.github.io/covid-19-tracker/
 
+# Help
+Ask questions at [telegram](https://t.me/maksym_1910) and post issues at [github](https://github.com/Maksym1910/covid-19-tracker/issues).
+
 # License
 ISC © [Rozhytskyi Maskym](https://github.com/Maksym1910)
