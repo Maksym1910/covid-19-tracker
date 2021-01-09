@@ -17,6 +17,7 @@ function App() {
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
   const [mapZoom, setMapZoom] = useState(3);
   const [mapCountries, setMapCountries] = useState([]);
+  const [casesType, setCasesType] = useState("cases");
 
   useEffect(() => {
     fetch(API_WORLDWIDE)
@@ -74,6 +75,8 @@ function App() {
           countryInfo={countryInfo}
           center={mapCenter}
           zoom={mapZoom}
+          casesType={casesType}
+          setCasesType={setCasesType}
         />
       </div>
 

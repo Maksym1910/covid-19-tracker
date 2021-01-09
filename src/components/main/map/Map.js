@@ -3,7 +3,7 @@ import "./Map.css";
 import { MapContainer as LeafletMap, TileLayer, useMap } from "react-leaflet";
 import {showDataOnMap} from "../../../utils/showDataOnMap";
 
-const Map = ({ mapCountries, center, zoom }) => {
+const Map = ({ mapCountries, center, zoom, casesType }) => {
   function SetViewOnClick({ center, zoom }) {
     const map = useMap();
     map.setView(center, zoom);
@@ -18,7 +18,7 @@ const Map = ({ mapCountries, center, zoom }) => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <SetViewOnClick center={center} zoom={zoom} />
-        {showDataOnMap(mapCountries)}
+        {showDataOnMap(mapCountries, casesType)}
       </LeafletMap>
     </div>
   );

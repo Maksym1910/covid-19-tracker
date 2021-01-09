@@ -17,7 +17,7 @@ const casesTypeColors = {
   },
 };
 
-export const showDataOnMap = (data, casesType = "cases") =>
+export const showDataOnMap = (data, casesType) =>
   data.map((country, index) => (
     <Circle
       key={index}
