@@ -14,8 +14,9 @@ function App() {
   const [country, setCountry] = useState("worldwide");
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
-  const [mapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
-  const [mapZoom] = useState(3);
+  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapZoom, setMapZoom] = useState(3);
+  const [mapCountries, setMapCountries] = useState([]);
 
   useEffect(() => {
     fetch(API_WORLDWIDE)
@@ -31,10 +32,11 @@ function App() {
         name: country.country,
         value: country.countryInfo.iso2,
       }));
-
       const sortedData = sortData(data);
-      setTableData(sortedData);
+
       setCountries(countries);
+      setMapCountries(data);
+      setTableData(sortedData);
     };
     getCountriesData();
   }, []);
@@ -53,6 +55,9 @@ function App() {
       .then((data) => {
         setCountry(countryCode);
         setCountryInfo(data);
+
+        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        setMapZoom(4);
       });
   };
 
@@ -65,9 +70,10 @@ function App() {
           onCountryChange={onCountryChange}
         />
         <Stats
+          mapCountries={mapCountries}
           countryInfo={countryInfo}
-          zoom={mapZoom}
           center={mapCenter}
+          zoom={mapZoom}
         />
       </div>
 
