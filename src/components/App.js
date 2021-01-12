@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import Header from "./components/header/Header";
-import Stats from "./components/main/Stats";
-import Sidebar from "./components/sidebar/Sidebar";
-import { sortData } from "./utils/sort";
+import Header from "./header/Header";
+import Stats from "./main/Stats";
+import Sidebar from "./sidebar/Sidebar";
+import { sortData } from "../utils/sort";
 
 function App() {
   const [API_WORLDWIDE] = useState(
