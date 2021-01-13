@@ -1,6 +1,6 @@
-import React from "react";
-import "./Header.css";
-import { MenuItem, FormControl, Select } from "@material-ui/core";
+import React from 'react';
+import './Header.css';
+import { MenuItem, FormControl, Select } from '@material-ui/core';
 
 const Header = ({ countries, country, onCountryChange }) => {
   return (
@@ -10,7 +10,9 @@ const Header = ({ countries, country, onCountryChange }) => {
         <Select variant="outlined" onChange={onCountryChange} value={country}>
           <MenuItem value="worldwide">Worldwide</MenuItem>
           {countries.map((country, index) => (
-            <MenuItem key={index} value={country.value}>{country.name}</MenuItem>
+            <MenuItem key={index} value={country.value}>
+              {country.name}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

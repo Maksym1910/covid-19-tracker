@@ -1,8 +1,8 @@
-import React from "react";
-import { Card, CardContent } from "@material-ui/core";
-import Table from "./table/Table";
-import LineGraph from "./lineGraph/LineGraph";
-import "./Sidebar.css";
+import React from 'react';
+import { Card, CardContent } from '@material-ui/core';
+import Table from './table/Table';
+import LineGraph from './lineGraph/LineGraph';
+import './Sidebar.css';
 
 const Sidebar = ({ tableData }) => {
   return (

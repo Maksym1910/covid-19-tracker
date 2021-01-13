@@ -1,6 +1,6 @@
-import React from "react";
-import numeral from "numeral";
-import "./Table.css";
+import React from 'react';
+import numeral from 'numeral';
+import './Table.css';
 
 const Table = ({ tableData }) => {
   return (
@@ -11,7 +11,7 @@ const Table = ({ tableData }) => {
             <tr key={index}>
               <td>{country}</td>
               <td>
-                <strong>{numeral(cases).format("0,0")}</strong>
+                <strong>{numeral(cases).format('0,0')}</strong>
               </td>
             </tr>
           ))}

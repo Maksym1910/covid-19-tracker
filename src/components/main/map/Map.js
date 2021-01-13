@@ -1,7 +1,7 @@
-import React from "react";
-import "./Map.css";
-import { MapContainer as LeafletMap, TileLayer, useMap } from "react-leaflet";
-import {showDataOnMap} from "../../../utils/showDataOnMap";
+import React from 'react';
+import './Map.css';
+import { MapContainer as LeafletMap, TileLayer, useMap } from 'react-leaflet';
+import { showDataOnMap } from '../../../utils/showDataOnMap';
 
 const Map = ({ mapCountries, center, zoom, casesType }) => {
   function SetViewOnClick({ center, zoom }) {
