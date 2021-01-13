@@ -3,16 +3,14 @@ import { Line } from "react-chartjs-2";
 import { options } from "../../../utils/options";
 import { buildChartData } from "../../../utils/buildChartData";
 import "./LineGraph.css";
+import {API_LAST_120_DAYS} from "../../../constants/apiKeys";
 
 const LineGraph = ({ casesType = "cases" }) => {
-  const [API] = useState(
-    "https://disease.sh/v3/covid-19/historical/all?lastdays=120"
-  );
   const [data, setData] = useState({});
 
   useEffect(() => {
     const fetchedData = async () => {
-      await fetch(API)
+      await fetch(API_LAST_120_DAYS)
         .then((response) => response.json())
         .then((data) => {
           const chartData = buildChartData(data, casesType);

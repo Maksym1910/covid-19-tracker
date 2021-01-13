@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
-import Header from "./header/Header";
-import Stats from "./main/Stats";
-import Sidebar from "./sidebar/Sidebar";
-import { sortData } from "../utils/sort";
+import React, { useEffect, useState } from 'react';
+import './App.css';
+import Header from './header/Header';
+import Stats from './main/Stats';
+import Sidebar from './sidebar/Sidebar';
+import { API_WORLDWIDE, API_COUNTRIES } from '../constants/apiKeys';
+import { sortData } from '../utils/sort';
 
 function App() {
-  const [API_WORLDWIDE] = useState(
-    "https://disease.sh/v3/covid-19/all?yesterday=true&strict=true"
-  );
-  const [API_COUNTRIES] = useState("https://disease.sh/v3/covid-19/countries/");
   const [countries, setCountries] = useState([]);
-  const [country, setCountry] = useState("worldwide");
+  const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
   const [mapZoom, setMapZoom] = useState(3);
   const [mapCountries, setMapCountries] = useState([]);
-  const [casesType, setCasesType] = useState("cases");
+  const [casesType, setCasesType] = useState('cases');
 
   useEffect(() => {
     fetch(API_WORLDWIDE)
@@ -45,10 +42,10 @@ function App() {
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
     const url =
-      countryCode === "worldwide"
+      countryCode === 'worldwide'
         ? API_WORLDWIDE
         : API_COUNTRIES.concat(countryCode).concat(
-            "?yesterday=true&strict=true"
+            '?yesterday=true&strict=true'
           );
 
     await fetch(url)
